@@ -1,19 +1,11 @@
-package orgs.androidtown.asynctask;
+# AsyncTask
+## 개념 및 메소드
 
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
+- AsyncTask는 handler와 thread 사용을 편리하게 사용하기 위해 만들어진 클래스
+- 한 클래스 안에서 Ui작업과 비즈니스 로직 처리가 모두 가능하기 때문에 간편
+- 하나의 객체로 재사용이 불가능함
 
-/**
- * AsyncTask = 세 개의 기본함수를 지원하는 Thread
- * 1. onPreExecute = doInBackground ()함수가 실행되기 전에 실행되는 함수
- * 2. doInBackground : 백그라운(sub thread)에서 코드를 실행하는 함수 <에만 sub thread
- *         v onPostExecute는 doInBackground로 부터 데이터를 받을 수 있다.
- * 3. onPostExecute : doInBackground()함수가 실행된 후에 실행되는 함수
- *
- */
-
+```Java
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
@@ -55,3 +47,4 @@ public class MainActivity extends AppCompatActivity {
         task.execute(url);
     }
 }
+```
